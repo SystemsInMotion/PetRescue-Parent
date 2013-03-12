@@ -1,12 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	
+
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.systemsinmotion</groupId>
 	<artifactId>petrescue-parent</artifactId>
 	<version>0.5-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	
+
 	<name>PetRescue Parent POM</name>
 	<description>The parent POM for all PetRescue projects</description>
 
@@ -33,7 +33,7 @@
 		<bonecp-version>0.7.1.RELEASE</bonecp-version>
 		<ehcache.version>2.6.0</ehcache.version>
 		<gson.version>2.2.2</gson.version>
-		<hibernate.version>4.1.7.Final</hibernate.version>
+		<hibernate.version>4.1.9.Final</hibernate.version>
 		<jackson.version>1.9.12</jackson.version>
 		<java.mail.version>1.4.3</java.mail.version>
 		<jsp.api.version>2.2.1</jsp.api.version>
@@ -52,7 +52,7 @@
 
 
 	<dependencies>
-	
+
 		<!-- SpringFramework -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -60,7 +60,25 @@
 			<version>${spring.version}</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
 
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aspects</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+			<version>${spring.data.version}</version>
+		</dependency>
+		
+		
 		<!-- JPA -->
 		<dependency>
 			<groupId>org.hibernate.javax.persistence</groupId>
@@ -128,6 +146,22 @@
 			<version>${mockito.version}</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.7.1</version>
+		</dependency>
 	</dependencies>
-
+	
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
