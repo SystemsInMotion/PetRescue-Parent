@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.systemsinmotion</groupId>
     <artifactId>petrescue-parent</artifactId>
-    <version>0.7-SNAPSHOT</version>
+    <version>0.8-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>PetRescue Parent POM</name>
