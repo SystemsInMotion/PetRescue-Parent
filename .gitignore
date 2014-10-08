@@ -1,1 +1,6 @@
-/.settings
+*.iml
+.externalToolBuilders/
+.idea/
+.project
+.settings
+target/
